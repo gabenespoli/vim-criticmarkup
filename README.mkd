@@ -46,6 +46,25 @@ If you want to reject it, use
 
 Currently, neither accept or reject work on highlights or comments.
 
+## Syntax highlighting
+
+To customize the default coloring of criticmarkup elements, you must first 
+disable the default coloring:
+
+```vim
+let g:criticmarkup#disable#highlighting = 1
+```
+
+Then add the following highlight groups to your colorscheme or vimrc
+(defaults are shown):
+
+```vim
+hi criticAdd guibg=#00ff00 guifg=#101010 ctermbg=46 ctermfg=16
+hi criticDel guibg=#ff0000 guifg=#ffffff ctermbg=196 ctermfg=231
+hi criticMeta guibg=#0099FF guifg=#101010 ctermbg=33 ctermfg=16
+hi criticHighlighter guibg=#ffff00 guifg=#101010 ctermbg=11 ctermfg=16
+```
+
 ## TODO
 
 * Expand `accept`s and `reject`s to handle highlights and comments.
